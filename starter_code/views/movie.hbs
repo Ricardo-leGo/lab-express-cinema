@@ -1,6 +1,17 @@
 
-<h1>hoasdñaoihd</h1>
+<h1>Gallery</h1>
 
 {{#each movie }}
-    {{this.director}}
+    <h1>{{this.title}}</h1>
+    <h2>{{this.director}}</h2>
+    <img src={{this.image}} alt={{this.title}}>
+    <p>{{this.description}}</p>
+    <h3>Stars</h3>
+    {{#each this.stars as |star|}}
+    <li>{{star}}</li>
+    {{/each}}
+    <h3>Showtimes</h3>
+    {{#each this.showtimes as |time|}}
+    <li>{{time}}</li>
+    {{/each}}
 {{/each}}

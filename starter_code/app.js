@@ -16,9 +16,9 @@ const films        = require('./bin/seeds')
 mongoose
   .connect("mongodb://localhost/moviesDB", {useNewUrlParser: true, useUnifiedTopology: true })
   .then(x => {
-      // Movie.create(films)
-      // .then(dbcreated => {console.log('films created')})
-      // .catch(error => console.log(eror))
+      Movie.create(films)
+      .then(dbcreated => {console.log('films created')})
+      .catch(error => console.log(error))
 
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
 

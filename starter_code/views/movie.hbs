@@ -1,17 +1,23 @@
 
-<h1>Gallery</h1>
-
+<div id="detail">
 {{#each movie }}
     <h1>{{this.title}}</h1>
     <h2>{{this.director}}</h2>
     <img src={{this.image}} alt={{this.title}}>
     <p>{{this.description}}</p>
     <h3>Stars</h3>
+    <div id="stars">
+        <br/>
     {{#each this.stars as |star|}}
-    <li>{{star}}</li>
+    <li>{{star}} |</li>
     {{/each}}
+    </div>
     <h3>Showtimes</h3>
+    <div id="timescontainer">
     {{#each this.showtimes as |time|}}
-    <li>{{time}}</li>
+    <li>{{time}} |</li>
     {{/each}}
+    </div>
+
 {{/each}}
+</div>

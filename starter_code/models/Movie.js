@@ -7,7 +7,7 @@ const movieSchema = new Schema(
   stars: [String],
   image: String,
   description: String,
-  showtimes:Array
+  showtimes:[String]
 },
 {
   timestamp:true
